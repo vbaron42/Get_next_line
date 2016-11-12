@@ -6,7 +6,7 @@
 #    By: vbaron <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 01:11:08 by vbaron            #+#    #+#              #
-#    Updated: 2016/11/06 18:53:14 by vbaron           ###   ########.fr        #
+#    Updated: 2016/11/12 04:48:21 by vbaron           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,14 +37,12 @@ $(NAME):
 	@gcc -c $(CFLAGS) $(SRC_NAME)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@cp $(NAME) includes/
 
 clean:
 	@rm -f $(OBJ)
 
 fclean: clean
 	@rm -f $(NAME)
-	@rm -f includes/$(NAME)
 
 re: fclean all
 
